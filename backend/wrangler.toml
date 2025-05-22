@@ -1,0 +1,72 @@
+name = "grc-api"
+main = "src/index.ts"
+compatibility_date = "2024-03-01"
+
+# Default/local development database
+[[d1_databases]]
+binding = "DB"
+database_name = "grc-database-dev"
+database_id = "6da93b70-efd6-46ed-be6c-eb453b2047b3"
+
+[[r2_buckets]]
+binding = "DOCUMENTS"
+bucket_name = "grc-documents-dev"
+
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "2873e809911340f2b81d9e183c90d120"
+preview_id = "72b928222e8b4d2c99af480887e1cfdb"
+
+# Development environment
+[env.dev]
+vars = { ENVIRONMENT = "development" }
+
+[[env.dev.d1_databases]]
+binding = "DB"
+database_name = "grc-database-dev"
+database_id = "6da93b70-efd6-46ed-be6c-eb453b2047b3"
+
+[[env.dev.r2_buckets]]
+binding = "DOCUMENTS"
+bucket_name = "grc-documents-dev"
+
+[[env.dev.kv_namespaces]]
+binding = "SESSIONS"
+id = "2873e809911340f2b81d9e183c90d120"
+preview_id = "72b928222e8b4d2c99af480887e1cfdb"
+
+# Staging environment
+[env.staging]
+vars = { ENVIRONMENT = "staging" }
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "grc-database-staging"
+database_id = "a8c7a138-fce0-4882-af7b-0b2678f2ce3f"
+
+[[env.staging.r2_buckets]]
+binding = "DOCUMENTS"
+bucket_name = "grc-documents-staging"
+
+[[env.staging.kv_namespaces]]
+binding = "SESSIONS"
+id = "c467e41fedd44c8f9fd563acb3de07ad"
+preview_id = "a4e174437edb4625b8c90f98c385aab4"
+
+# Production environment
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "grc-database-prod"
+database_id = "5e2adeee-ce28-400e-b9d7-9b863e658ed6"
+
+[[env.production.r2_buckets]]
+binding = "DOCUMENTS"
+bucket_name = "grc-documents-prod"
+
+[[env.production.kv_namespaces]]
+binding = "SESSIONS"
+id = "80678490cf174f5fbc4211978e3de8b9"
+preview_id = "a418a8f9b3c748418efad62373f48f8c"
