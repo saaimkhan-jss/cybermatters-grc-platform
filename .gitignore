@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment variables
+.env*
+!.env.example
+
+# Production builds
+.next/
+out/
+dist/
+build/
+
+# Cloudflare
+.wrangler/
+wrangler.toml.backup
+
+# Database
+*.db
+*.sqlite
+
+# IDE & OS
+.vscode/
+.DS_Store
+*.log
+
+# Secrets
+secrets.json
+*.key
+*.pem
